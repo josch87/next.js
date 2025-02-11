@@ -18,13 +18,14 @@ use crate::{
     environment::ChunkLoading,
     module::Module,
     module_graph::{GraphTraversalAction, ModuleGraph},
-    output::OutputAssets,
+    output::{OutputAsset, OutputAssets},
     reference::ModuleReference,
     traced_asset::TracedAsset,
 };
 
 pub struct MakeChunkGroupResult {
     pub chunks: Vec<ResolvedVc<Box<dyn Chunk>>>,
+    pub referenced_output_assets: Vec<ResolvedVc<Box<dyn OutputAsset>>>,
     pub availability_info: AvailabilityInfo,
 }
 
@@ -231,13 +232,13 @@ pub async fn make_chunk_group(
         *chunking_context,
         Vc::cell(chunk_items),
         "".into(),
-        Vc::cell(referenced_output_assets),
     )
     .owned()
     .await?;
 
     Ok(MakeChunkGroupResult {
         chunks,
+        referenced_output_assets,
         availability_info,
     })
 }
