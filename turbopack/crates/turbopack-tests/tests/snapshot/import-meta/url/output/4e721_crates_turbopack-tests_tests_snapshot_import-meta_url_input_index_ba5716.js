@@ -1,12 +1,9 @@
-(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push([
-<<<<<<<< HEAD:turbopack/crates/turbopack-tests/tests/snapshot/import-meta/url/output/4e721_crates_turbopack-tests_tests_snapshot_import-meta_url_input_index_ba5716.js
-    "output/4e721_crates_turbopack-tests_tests_snapshot_import-meta_url_input_index_ba5716.js",
-    {},
-    {"otherChunks":["output/turbopack_crates_turbopack-tests_tests_snapshot_import-meta_url_input_7615cd._.js"],"runtimeModuleIds":["[project]/turbopack/crates/turbopack-tests/tests/snapshot/import-meta/url/input/index.js [test] (ecmascript)"]}
-========
-    "output/4e721_crates_turbopack-tests_tests_snapshot_import-meta_url_input_index_bc8414.js",
-    {},
-    {"otherChunks":["output/turbopack_crates_turbopack-tests_tests_snapshot_import-meta_url_input_4af4c9._.js"],"runtimeModuleIds":["+project+/turbopack/crates/turbopack-tests/tests/snapshot/import-meta/url/input/index.js [test] (ecmascript)"]}
->>>>>>>> 0de4b798e0 (Update tests):turbopack/crates/turbopack-tests/tests/snapshot/import-meta/url/output/4e721_crates_turbopack-tests_tests_snapshot_import-meta_url_input_index_bc8414.js
-]);
-// Dummy runtime
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 12, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/turbopack/crates/turbopack-tests/tests/snapshot/import-meta/url/input/mod.mjs"],"sourcesContent":["const assetUrl = new URL('./asset.txt', import.meta.url);\n\nconsole.log(assetUrl);\nfetch(assetUrl)\n  .then(res => res.text())\n  .then(console.log);\n"],"names":[],"mappings":";;;;;;AAAA,MAAM;AAEN,QAAQ,GAAG,CAAC;AACZ,MAAM,UACH,IAAI,CAAC,CAAA,MAAO,IAAI,IAAI,IACpB,IAAI,CAAC,QAAQ,GAAG"}},
+    {"offset": {"line": 21, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 27, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/turbopack/crates/turbopack-tests/tests/snapshot/import-meta/url/input/index.js"],"sourcesContent":["import './mod.mjs';\n"],"names":[],"mappings":";AAAA"}},
+    {"offset": {"line": 30, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
