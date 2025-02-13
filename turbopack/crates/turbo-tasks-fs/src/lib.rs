@@ -1584,7 +1584,7 @@ impl ValueToString for FileSystemPath {
     #[turbo_tasks::function]
     async fn to_string(&self) -> Result<Vc<RcStr>> {
         Ok(Vc::cell(
-            format!("~{}/{}", self.fs.to_string().await?, self.path).into(),
+            format!("[{}]/{}", self.fs.to_string().await?, self.path).into(),
         ))
     }
 }
