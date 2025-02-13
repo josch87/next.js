@@ -438,9 +438,9 @@ fn format_absolute_fs_path(path: &Path, name: &str, root_path: &Path) -> Option<
     let path = if let Ok(rel_path) = path.strip_prefix(root_path) {
         let path = if MAIN_SEPARATOR != '/' {
             let rel_path = rel_path.to_string_lossy().replace(MAIN_SEPARATOR, "/");
-            format!("~{name}/{}", rel_path)
+            format!("/[{name}]/{}", rel_path)
         } else {
-            format!("~{name}/{}", rel_path.display())
+            format!("/[{name}]/{}", rel_path.display())
         };
         Some(path)
     } else {

@@ -163,7 +163,7 @@ pub async fn fileify_source_map(
         .await?
         .context("Expected the chunking context to have a DiskFileSystem")?
         .await?;
-    let prefix = format!("{}~{}/", SOURCE_MAP_PREFIX, context_fs.name());
+    let prefix = format!("{}[{}]/", SOURCE_MAP_PREFIX, context_fs.name());
 
     // TODO this could be made (much) more efficient by not even de- and serializing other fields
     // (apart from `sources`) and just keep storing them as strings.
